@@ -2,6 +2,7 @@ import telepot
 import sys
 import time
 import datetime
+import os
 from pprint import pprint
 
 def handle(msg):
@@ -46,7 +47,7 @@ def handle(msg):
 #        bot.sendMessage(chat_id, "Lista comandi:")
 #        bot.sendMessage(chat_id, "/Lol    /Onesto    /Time    /Righini    /Help")
 
-bot = telepot.Bot('337092270:AAGLbgnmaITgIJvMawY7jDXs4wA7INNfifY')
+bot = telepot.Bot(os.environ["TELEGRAM_TOKEN"])
 bot.message_loop(handle)
 
 while 1:
